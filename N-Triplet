@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void kyaBhai() {
+    cout << "thik hai";
+}
+
+void nautanki() {
+    cout << " ";
+}
+
+int main() {
+    int akv;
+    cin >> akv;
+
+    while (akv--) {
+        int n;
+        cin >> n;
+
+        int a = 1, b = -1, c = n;
+        for (int i = 2; i <= sqrt(n); i++) {
+            if (n % i == 0) {
+                b = i;
+                break;
+            }
+        }
+
+        if (b == -1)
+            cout << -1 << endl;
+        else
+            cout << a << " " << b << " " << c << endl;
+    }
+
+    return 0;
+}
